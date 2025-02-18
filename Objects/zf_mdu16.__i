@@ -1,0 +1,1 @@
+"seekfree_libraries\zf_mdu16.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_mdu16.lst) OBJECT(.\Objects\zf_mdu16.obj)

@@ -1,0 +1,1 @@
+"seekfree_libraries\zf_iic.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_iic.lst) OBJECT(.\Objects\zf_iic.obj)

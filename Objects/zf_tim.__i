@@ -1,0 +1,1 @@
+"seekfree_libraries\zf_tim.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_tim.lst) OBJECT(.\Objects\zf_tim.obj)

@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_BLE6A20.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_BLE6A20.lst) OBJECT(.\Objects\SEEKFREE_BLE6A20.obj)

@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_IPS114_SPI.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_IPS114_SPI.lst) OBJECT(.\Objects\SEEKFREE_IPS114_SPI.obj)

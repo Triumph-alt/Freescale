@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_TSL1401.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_TSL1401.lst) OBJECT(.\Objects\SEEKFREE_TSL1401.obj)

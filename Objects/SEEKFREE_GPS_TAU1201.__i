@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_GPS_TAU1201.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_GPS_TAU1201.lst) OBJECT(.\Objects\SEEKFREE_GPS_TAU1201.obj)

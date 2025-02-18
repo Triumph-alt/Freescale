@@ -1,0 +1,24 @@
+".\Objects\board.obj",
+".\Objects\common.obj",
+".\libraries\STC32_MDU32_V1.1.LIB",
+".\Objects\zf_adc.obj",
+".\Objects\zf_delay.obj",
+".\Objects\zf_eeprom.obj",
+".\Objects\zf_exti.obj",
+".\Objects\zf_fifo.obj",
+".\Objects\zf_function.obj",
+".\Objects\zf_gpio.obj",
+".\Objects\zf_iic.obj",
+".\Objects\zf_mdu16.obj",
+".\Objects\zf_nvic.obj",
+".\Objects\zf_pwm.obj",
+".\Objects\zf_spi.obj",
+".\Objects\zf_tim.obj",
+".\Objects\zf_uart.obj",
+".\Objects\main.obj",
+".\Objects\isr.obj" 
+TO ".\Objects\empty_model" 
+PRINT(".\Listings\empty_model.map") CASE 
+REMOVEUNUSED 
+CLASSES (EDATA (0x0-0xFFF), 
+HDATA (0x0-0xFFF)) 

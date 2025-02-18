@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_IMU660RA.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_IMU660RA.lst) OBJECT(.\Objects\SEEKFREE_IMU660RA.obj)

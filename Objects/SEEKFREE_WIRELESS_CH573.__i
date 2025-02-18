@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_WIRELESS_CH573.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_WIRELESS_CH573.lst) OBJECT(.\Objects\SEEKFREE_WIRELESS_CH573.obj)

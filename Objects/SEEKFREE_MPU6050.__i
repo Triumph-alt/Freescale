@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_MPU6050.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_MPU6050.lst) OBJECT(.\Objects\SEEKFREE_MPU6050.obj)

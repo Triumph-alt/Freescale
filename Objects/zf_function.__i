@@ -1,0 +1,1 @@
+"seekfree_libraries\zf_function.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_function.lst) OBJECT(.\Objects\zf_function.obj)

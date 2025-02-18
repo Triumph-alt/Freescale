@@ -1,0 +1,45 @@
+C251 COMPILER V5.60.0,  main                                                               18/02/25  20:47:31  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE main
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE user\main.c XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_lib
+                    -raries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\main.lst) OBJECT(.\Objects\main.obj) 
+
+stmt  level    source
+
+    1          #include "main.h"
+    2          
+    3          void main(void)
+    4          {
+    5   1              board_init();// 初始化寄存器,不能删
+    6   1              
+    7   1          while(1)
+    8   1              {
+    9   2                      
+   10   2          }
+   11   1      }
+
+
+Module Information          Static   Overlayable
+------------------------------------------------
+  code size            =         5     ------
+  ecode size           =    ------     ------
+  data size            =    ------     ------
+  idata size           =    ------     ------
+  pdata size           =    ------     ------
+  xdata size           =    ------     ------
+  xdata-const size     =    ------     ------
+  edata size           =    ------     ------
+  bit size             =    ------     ------
+  ebit size            =    ------     ------
+  bitaddressable size  =    ------     ------
+  ebitaddressable size =    ------     ------
+  far data size        =    ------     ------
+  huge data size       =    ------     ------
+  const size           =    ------     ------
+  hconst size          =    ------     ------
+End of Module Information.
+
+
+C251 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

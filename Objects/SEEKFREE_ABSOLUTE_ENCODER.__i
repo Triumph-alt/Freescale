@@ -1,0 +1,1 @@
+"seekfree_peripheral\SEEKFREE_ABSOLUTE_ENCODER.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_components;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\SEEKFREE_ABSOLUTE_ENCODER.lst) OBJECT(.\Objects\SEEKFREE_ABSOLUTE_ENCODER.obj)

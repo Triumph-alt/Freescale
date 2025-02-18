@@ -1,0 +1,1 @@
+"seekfree_libraries\zf_eeprom.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_eeprom.lst) OBJECT(.\Objects\zf_eeprom.obj)
