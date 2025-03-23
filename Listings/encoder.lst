@@ -1,4 +1,4 @@
-C251 COMPILER V5.60.0,  encoder                                                            23/03/25  16:11:10  PAGE 1   
+C251 COMPILER V5.60.0,  encoder                                                            23/03/25  16:50:32  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE encoder
@@ -67,7 +67,7 @@ Module Information          Static   Overlayable
   idata size           =    ------     ------
   pdata size           =    ------     ------
   xdata size           =    ------     ------
-C251 COMPILER V5.60.0,  encoder                                                            23/03/25  16:11:10  PAGE 2   
+C251 COMPILER V5.60.0,  encoder                                                            23/03/25  16:50:32  PAGE 2   
 
   xdata-const size     =    ------     ------
   edata size           =         4     ------

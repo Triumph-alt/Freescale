@@ -1,4 +1,4 @@
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 1   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_uart
@@ -66,7 +66,7 @@ stmt  level    source
    51          //                                                              如果不同的串口，使用同一个定时器，串口的波特率以最后一个初始化为准
    52          //-------------------------------------------------------------------------------------------------------
              -------------
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 2   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 2   
 
    53          void uart_init(UARTN_enum uart_n, UARTPIN_enum uart_rx_pin, UARTPIN_enum uart_tx_pin, uint32 baud, TIMN_e
              -num tim_n)
@@ -134,7 +134,7 @@ stmt  level    source
   115   3                              {
   116   4                                      P_SW2 |= 0x00;
   117   4                              }
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 3   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 3   
 
   118   3                              else if((UART2_RX_P46 == uart_rx_pin) && (UART2_TX_P47 == uart_tx_pin))
   119   3                              {
@@ -202,7 +202,7 @@ stmt  level    source
   181   4                              }
   182   3                              else if((UART4_RX_P52 == uart_rx_pin) && (UART4_TX_P53 == uart_tx_pin))
   183   3                              {
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 4   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 4   
 
   184   4                                      P5M0 = 0x00;
   185   4                                      P5M1 = 0x01<<2;//P5.2 需要设置为高阻
@@ -270,7 +270,7 @@ stmt  level    source
   243   1              uart_putchar(uart_n,*p++);
   244   1      }
   245          
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 5   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 5   
 
   246          
   247          //-------------------------------------------------------------------------------------------------------
@@ -338,7 +338,7 @@ stmt  level    source
   307   3                      }
   308   2                      else if (strncmp(g_RxData, "imu_kp:", 7) == 0)
   309   2                      {
-C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:11:09  PAGE 6   
+C251 COMPILER V5.60.0,  zf_uart                                                            23/03/25  16:50:31  PAGE 6   
 
   310   3                              sscanf(g_RxData, "imu_kp:%f", &IMU693PID.kp);
   311   3                              

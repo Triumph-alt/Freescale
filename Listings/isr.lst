@@ -1,4 +1,4 @@
-C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:11:09  PAGE 1   
+C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:50:32  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE isr
@@ -66,7 +66,7 @@ stmt  level    source
    54          
    55          //UART2中断
    56          void UART2_Isr() interrupt 8
-C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:11:09  PAGE 2   
+C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:50:32  PAGE 2   
 
    57          {
    58   1          if(UART2_GET_TX_FLAG)
@@ -134,7 +134,7 @@ stmt  level    source
   120          void INT1_Isr() interrupt 2
   121          {
   122   1      
-C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:11:09  PAGE 3   
+C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:50:32  PAGE 3   
 
   123   1      }
   124          
@@ -202,7 +202,7 @@ stmt  level    source
   186          {
   187   1              TIM2_CLEAR_FLAG;  //清除中断标志
   188   1              
-C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:11:09  PAGE 4   
+C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:50:32  PAGE 4   
 
   189   1              count++;
   190   1              if (count >= 300)
@@ -270,7 +270,7 @@ stmt  level    source
   252   1      
   253   1      }
   254          
-C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:11:09  PAGE 5   
+C251 COMPILER V5.60.0,  isr                                                                23/03/25  16:50:32  PAGE 5   
 
   255          
   256          //void  INT0_Isr()  interrupt 0;

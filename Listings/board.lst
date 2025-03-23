@@ -1,4 +1,4 @@
-C251 COMPILER V5.60.0,  board                                                              23/03/25  16:11:03  PAGE 1   
+C251 COMPILER V5.60.0,  board                                                              23/03/25  16:50:29  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE board
@@ -66,7 +66,7 @@ stmt  level    source
    52   2                      VRTRIM = VRT27M_ADDR;
    53   2                      IRCBAND = 0x02;
    54   2                      CLKDIV = 0x00;
-C251 COMPILER V5.60.0,  board                                                              23/03/25  16:11:03  PAGE 2   
+C251 COMPILER V5.60.0,  board                                                              23/03/25  16:50:29  PAGE 2   
 
    55   2              }
    56   1              else if(sys_clk == 24000000)
@@ -134,7 +134,7 @@ stmt  level    source
   118          {
   119   1              EAXFR = 1;                              // 使能访问XFR
   120   1              CKCON = 0x00;                   // 设置外部数据总线为最快
-C251 COMPILER V5.60.0,  board                                                              23/03/25  16:11:03  PAGE 3   
+C251 COMPILER V5.60.0,  board                                                              23/03/25  16:50:29  PAGE 3   
 
   121   1              WTST = 0;               // 设置程序代码等待参数，赋值为0可将CPU执行程序的速度设置为最快
   122   1              SET_P54_RESRT;                  // 使P54为复位引脚
@@ -202,7 +202,7 @@ stmt  level    source
   184   1      }
   185          #endif
   186          
-C251 COMPILER V5.60.0,  board                                                              23/03/25  16:11:03  PAGE 4   
+C251 COMPILER V5.60.0,  board                                                              23/03/25  16:50:29  PAGE 4   
 
   187          void DisableGlobalIRQ(void)
   188          {

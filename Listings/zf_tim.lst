@@ -1,4 +1,4 @@
-C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:11:08  PAGE 1   
+C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:50:31  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_tim
@@ -66,7 +66,7 @@ stmt  level    source
    52   2                      
    53   2                      case CTIM1_P35:
    54   2                      {
-C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:11:08  PAGE 2   
+C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:50:31  PAGE 2   
 
    55   3                              TL1 = 0x00;
    56   3                              TH1 = 0x00;
@@ -134,7 +134,7 @@ stmt  level    source
   116   3                              dat = ((uint8)T2L) | dat;
   117   3                              break;
   118   3                      }
-C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:11:08  PAGE 3   
+C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:50:31  PAGE 3   
 
   119   2                      case CTIM3_P04:
   120   2                      {
@@ -202,7 +202,7 @@ stmt  level    source
   180   2                      {
   181   3                              T4T3M &= ~(1<<7);
   182   3                              T4H = 0;
-C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:11:08  PAGE 4   
+C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:50:31  PAGE 4   
 
   183   3                              T4L = 0;
   184   3                              T4T3M |= (1<<7);
@@ -271,7 +271,7 @@ Module Information          Static   Overlayable
 ------------------------------------------------
   code size            =       380     ------
   ecode size           =    ------     ------
-C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:11:08  PAGE 5   
+C251 COMPILER V5.60.0,  zf_tim                                                             23/03/25  16:50:31  PAGE 5   
 
   data size            =    ------     ------
   idata size           =    ------     ------
