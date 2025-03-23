@@ -1,10 +1,11 @@
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 1   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_fifo
 OBJECT MODULE PLACED IN .\Objects\zf_fifo.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_fifo.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librari
-                    -es;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_fifo.lst) OBJECT(.\Objects\zf_fifo.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_fifo.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.
+                    -\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_fifo.lst) OBJECT(.\Objects\zf_fifo.obj)
+                    - 
 
 stmt  level    source
 
@@ -65,9 +66,9 @@ stmt  level    source
    50   1      }
    51          
    52          //-------------------------------------------------------------------------------------------------------
-             -------------
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 2   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 2   
 
+             -------------
    53          // º¯Êı¼ò½é     FIFO Î²Ö¸ÕëÎ»ÒÆ
    54          // ²ÎÊıËµÃ÷     *fifo               FIFO ¶ÔÏóÖ¸Õë
    55          // ²ÎÊıËµÃ÷     offset              Æ«ÒÆÁ¿
@@ -133,9 +134,9 @@ stmt  level    source
   108          // ±¸×¢ĞÅÏ¢
   109          //-------------------------------------------------------------------------------------------------------
              -------------
-  110          uint32 fifo_used (fifo_struct *fifo)
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 3   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 3   
 
+  110          uint32 fifo_used (fifo_struct *fifo)
   111          {
   112   1          //zf_assert(fifo != NULL);
   113   1          return (fifo->max - fifo->reamin_size);                                            // ·µ»Øµ±Ç° FIFO »
@@ -201,9 +202,9 @@ stmt  level    source
   165          // Ê¹ÓÃÊ¾Àı     zf_log(fifo_write_buffer(&fifo, data, 32) == FIFO_SUCCESS, "fifo_write_buffer error");
   166          // ±¸×¢ĞÅÏ¢
   167          //-------------------------------------------------------------------------------------------------------
-             -------------
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 4   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 4   
 
+             -------------
   168          fifo_state_enum fifo_write_buffer (fifo_struct *fifo, void *dat, uint32 length)
   169          {
   170   1          //zf_assert(NULL != fifo);
@@ -269,9 +270,9 @@ stmt  level    source
   225   6                              fifo_head_offset(fifo, temp_length);                    // Í·Ö¸ÕëÆ«ÒÆ
   226   6                              memcpy(
   227   6                                  &(((uint32 *)fifo->buffer)[fifo->head]),
-  228   6                                  &(((uint32 *)dat)[temp_length]),
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 5   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 5   
 
+  228   6                                  &(((uint32 *)dat)[temp_length]),
   229   6                                  (length - temp_length) * 4);                        // ¿½±´µÚ¶ş¶ÎÊı¾İ
   230   6                              fifo_head_offset(fifo, length - temp_length);           // Í·Ö¸ÕëÆ«ÒÆ
   231   6                          }break;
@@ -337,9 +338,9 @@ stmt  level    source
   286   1          fifo_state_enum return_state = FIFO_SUCCESS;                                // ²Ù×÷½á¹û³õÖµ
   287   1      
   288   1          do
-  289   1          {
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 6   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 6   
 
+  289   1          {
   290   2              if(NULL == dat)
   291   2              {
   292   3                  return_state = FIFO_BUFFER_NULL;                                    // ÓÃ»§»º³åÇøÒì³£
@@ -405,9 +406,9 @@ stmt  level    source
              -------------
   345          fifo_state_enum fifo_read_buffer (fifo_struct *fifo, void *dat, uint32 *length, fifo_operation_enum flag)
   346          {
-  347   1          //zf_assert(NULL != fifo);
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 7   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 7   
 
+  347   1          //zf_assert(NULL != fifo);
   348   1          //zf_assert(NULL != length);
   349   1          fifo_state_enum return_state = FIFO_SUCCESS;                                // ²Ù×÷½á¹û³õÖµ
   350   1          uint32 temp_length = 0;
@@ -473,9 +474,9 @@ stmt  level    source
   403   6                              memcpy(&(((uint16 *)dat)[temp_length]), fifo->buffer, (uint16)((*length - temp_le
              -ngth) * 2));
   404   6                          }break;
-  405   5                          case FIFO_DATA_32BIT:
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 8   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 8   
 
+  405   5                          case FIFO_DATA_32BIT:
   406   5                          {
   407   6                              memcpy(dat, &(((uint32 *)fifo->buffer)[fifo->end]), (uint16)(temp_length * 4));
   408   6                              memcpy(&(((uint32 *)dat)[temp_length]), fifo->buffer, (uint16)((*length - temp_le
@@ -541,9 +542,9 @@ stmt  level    source
   460   3                  if((FIFO_RESET | FIFO_CLEAR | FIFO_WRITE) & fifo->execution)        // ÅĞ¶ÏÊÇ·ñµ±Ç° FIFO ÊÇ·ñ
              -ÔÚÖ´ĞĞÇå¿Õ»òÖØÖÃ²Ù×÷
   461   3                  {
-  462   4                      *length = fifo_data_length;                                     // ¾ÀÕı¶ÁÈ¡µÄ³¤¶È
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 9   
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 9   
 
+  462   4                      *length = fifo_data_length;                                     // ¾ÀÕı¶ÁÈ¡µÄ³¤¶È
   463   4                      return_state = FIFO_READ_UNDO;                                  // ¶ÁÈ¡²Ù×÷Î´Íê³É
   464   4                      break;
   465   4                  }
@@ -609,9 +610,9 @@ stmt  level    source
   514   2              if(FIFO_READ_AND_CLEAN == flag)                                         // Èç¹ûÑ¡Ôñ¶ÁÈ¡²¢¸ü¸Ä FIF
              -O ×´Ì¬
   515   2              {
-  516   3                  if((FIFO_RESET | FIFO_CLEAR | FIFO_READ) == fifo->execution)        // ²»ÔÚ ÖØÖÃ Çå¿Õ ¶ÁÈ¡ ×´
-C251 COMPILER V5.60.0,  zf_fifo                                                            18/02/25  20:47:28  PAGE 10  
+C251 COMPILER V5.60.0,  zf_fifo                                                            23/03/25  16:11:06  PAGE 10  
 
+  516   3                  if((FIFO_RESET | FIFO_CLEAR | FIFO_READ) == fifo->execution)        // ²»ÔÚ ÖØÖÃ Çå¿Õ ¶ÁÈ¡ ×´
              -Ì¬ ±ÜÃâÒì³£
   517   3                  {
   518   4                      return_state = FIFO_CLEAR_UNDO;                                 // Çå¿Õ²Ù×÷Î´Íê³É

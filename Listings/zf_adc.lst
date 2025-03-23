@@ -1,10 +1,10 @@
-C251 COMPILER V5.60.0,  zf_adc                                                             18/02/25  20:47:26  PAGE 1   
+C251 COMPILER V5.60.0,  zf_adc                                                             23/03/25  16:11:04  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_adc
 OBJECT MODULE PLACED IN .\Objects\zf_adc.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_adc.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librarie
-                    -s;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_adc.lst) OBJECT(.\Objects\zf_adc.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_adc.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.\
+                    -libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_adc.lst) OBJECT(.\Objects\zf_adc.obj) 
 
 stmt  level    source
 
@@ -66,7 +66,7 @@ stmt  level    source
    51   1      
    52   1              ADCCFG |= speed&0x0F;                   //ADC时钟频率SYSclk/2/speed&0x0F;
    53   1              
-C251 COMPILER V5.60.0,  zf_adc                                                             18/02/25  20:47:26  PAGE 2   
+C251 COMPILER V5.60.0,  zf_adc                                                             23/03/25  16:11:04  PAGE 2   
 
    54   1              ADCCFG |= 1<<5;                                 //转换结果右对齐。 ADC_RES 保存结果的高 2 位， ADC_RESL 保存结果的低 8 位。
    55   1      }

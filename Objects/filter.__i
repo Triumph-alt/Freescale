@@ -1,0 +1,1 @@
+"user\filter.c" XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\filter.lst) OBJECT(.\Objects\filter.obj)

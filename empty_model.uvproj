@@ -262,7 +262,7 @@
             <uAlias>1</uAlias>
             <uRentF>0</uRentF>
             <uUch>0</uUch>
-            <uFlt64>0</uFlt64>
+            <uFlt64>1</uFlt64>
             <Fuzzy>3</Fuzzy>
             <Optim>7</Optim>
             <wLevel>2</wLevel>
@@ -360,9 +360,14 @@
           <GroupName>seekfree_peripheral</GroupName>
           <Files>
             <File>
-              <FileName>headfile.h</FileName>
+              <FileName>SEEKFREE_IMU963RA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\seekfree_peripheral\SEEKFREE_IMU963RA.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_IMU963RA.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\seekfree_peripheral\headfile.h</FilePath>
+              <FilePath>.\seekfree_peripheral\SEEKFREE_IMU963RA.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -533,6 +538,46 @@
               <FileName>main.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\user\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\pid.h</FilePath>
+            </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>filter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\filter.h</FilePath>
             </File>
           </Files>
         </Group>

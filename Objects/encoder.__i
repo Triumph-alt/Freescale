@@ -1,0 +1,1 @@
+"user\encoder.c" XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\encoder.lst) OBJECT(.\Objects\encoder.obj)

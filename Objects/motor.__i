@@ -1,0 +1,1 @@
+"user\motor.c" XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\motor.lst) OBJECT(.\Objects\motor.obj)

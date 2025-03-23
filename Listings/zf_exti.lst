@@ -1,10 +1,11 @@
-C251 COMPILER V5.60.0,  zf_exti                                                            18/02/25  20:47:28  PAGE 1   
+C251 COMPILER V5.60.0,  zf_exti                                                            23/03/25  16:11:05  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_exti
 OBJECT MODULE PLACED IN .\Objects\zf_exti.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_exti.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librari
-                    -es;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_exti.lst) OBJECT(.\Objects\zf_exti.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_exti.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.
+                    -\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_exti.lst) OBJECT(.\Objects\zf_exti.obj)
+                    - 
 
 stmt  level    source
 
@@ -65,9 +66,9 @@ stmt  level    source
    51   2                      INTCLKO |= 1<<5;        //使能INT3中断
    52   2              }
    53   1              
-   54   1              if(INT4_P30 == int_n)
-C251 COMPILER V5.60.0,  zf_exti                                                            18/02/25  20:47:28  PAGE 2   
+C251 COMPILER V5.60.0,  zf_exti                                                            23/03/25  16:11:05  PAGE 2   
 
+   54   1              if(INT4_P30 == int_n)
    55   1              {
    56   2                      INTCLKO |= 1<<6;        //使能INT4中断
    57   2              }

@@ -1,1 +1,1 @@
-"seekfree_libraries\zf_exti.c" XSMALL INTR2 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_exti.lst) OBJECT(.\Objects\zf_exti.obj)
+"seekfree_libraries\zf_exti.c" XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_exti.lst) OBJECT(.\Objects\zf_exti.obj)

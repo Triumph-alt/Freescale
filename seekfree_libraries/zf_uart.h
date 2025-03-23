@@ -22,6 +22,8 @@
 
 #include "common.h"
 #include "zf_tim.h"
+#include "main.h"
+#include "isr.h"
 
 
 #define	UART1_CLEAR_RX_FLAG (SCON  &= ~0x01)
@@ -44,6 +46,10 @@
 #define UART2_GET_TX_FLAG   (S2CON & 0x02)
 #define UART3_GET_TX_FLAG   (S3CON & 0x02)
 #define UART4_GET_TX_FLAG   (S4CON & 0x02)
+
+
+#define UART_TX_LENGTH   100
+#define UART_RX_LENGTH   100
 
 
 //此枚举定义不允许用户修改
@@ -80,9 +86,16 @@ typedef enum //枚举串口引脚
 extern uint8 busy[5];
 
 
+extern uint8_t g_TxData[UART_TX_LENGTH];
+extern uint8_t g_RxData[UART_RX_LENGTH];
+extern uint8_t g_RxPointer, g_RxDat;
+
+
 void uart_init(UARTN_enum uart_n, UARTPIN_enum uart_rx_pin, UARTPIN_enum uart_tx_pin, uint32 baud,TIMN_enum tim_n);
 void uart_putchar(UARTN_enum uart_n,uint8 dat);
 void uart_putstr(UARTN_enum uart_n,uint8 *str);
 void uart_putbuff(UARTN_enum uart_n,uint8 *p,uint32 len);
+
+void uart4_interrupt_callback(void);
 
 #endif

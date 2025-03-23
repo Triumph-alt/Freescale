@@ -19,8 +19,19 @@
 
 #include "zf_uart.h"
 #include "board.h"
+
+#include "motor.h"
+#include "encoder.h"
    
+
 uint8 busy[5];				 //接收忙标志位
+
+
+//串口收发相关数据
+uint8_t g_TxData[UART_TX_LENGTH] = {0};
+uint8_t g_RxData[UART_RX_LENGTH] = {0};
+uint8_t g_RxPointer = 0, g_RxDat = 0;
+
 
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      串口初始化
@@ -246,4 +257,85 @@ void uart_putstr(UARTN_enum uart_n,uint8 *str)
     {
         uart_putchar(uart_n, *str++);
     }
+}
+
+void uart4_interrupt_callback(void)
+{
+	if(g_RxPointer > 0)
+	{
+		if (strncmp(g_RxData, "left_kp", 7) == 0)
+		{
+			sscanf(g_RxData, "left_kp:%f", &LeftPID.kp);
+			
+//			sprintf(g_TxData, "left_kp:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "left_ki", 7) == 0)
+		{
+			sscanf(g_RxData, "left_ki:%f", &LeftPID.ki);
+			
+//			sprintf(g_TxData, "left_ki:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "left_kd", 7) == 0)
+		{
+			sscanf(g_RxData, "left_kd:%f", &LeftPID.kd);
+			
+//			sprintf(g_TxData, "left_kd:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "right_kp", 8) == 0)
+		{
+			sscanf(g_RxData, "right_kp:%f", &RightPID.kp);
+			
+//			sprintf(g_TxData, "right_kp:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "right_ki", 8) == 0)
+		{
+			sscanf(g_RxData, "right_ki:%f", &RightPID.ki);
+			
+//			sprintf(g_TxData, "right_ki:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "right_kd", 8) == 0)
+		{
+			sscanf(g_RxData, "right_kd:%f", &RightPID.kd);
+			
+//			sprintf(g_TxData, "right_kd:%f\n", LeftPID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "imu_kp:", 7) == 0)
+		{
+			sscanf(g_RxData, "imu_kp:%f", &IMU693PID.kp);
+			
+//			sprintf(g_TxData, "imu_kp:%f\n", IMU693PID.kp);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "imu_ki:", 7) == 0)
+		{
+			sscanf(g_RxData, "imu_ki:%f", &IMU693PID.ki);
+			
+//			sprintf(g_TxData, "imu_ki:%f\n", IMU693PID.ki);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "imu_kd:", 7) == 0)
+		{
+			sscanf(g_RxData, "imu_kd:%f", &IMU693PID.kd);
+			
+//			sprintf(g_TxData, "imu_kd:%f\n", IMU693PID.kd);
+//			uart_putstr(UART_4, g_TxData);
+		}
+		else if (strncmp(g_RxData, "gyroz:", 6) == 0)
+		{
+			sscanf(g_RxData, "gyroz:%f", &g_IMU693Point);
+			
+//			sprintf(g_TxData, "imu_kd:%f\n", IMU693PID.kd);
+//			uart_putstr(UART_4, g_TxData);
+		}
+	}
+	
+	g_RxPointer = 0;
+	memset(g_RxData, 0, UART_RX_LENGTH);
+	memset(g_TxData, 0, UART_TX_LENGTH);
 }

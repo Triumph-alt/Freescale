@@ -17,13 +17,17 @@
 // * @date       		2020-4-14
 // ********************************************************************************************************************/
 #include "main.h"
+#include "encoder.h"
+#include "filter.h"
+#include "motor.h"
+#include "pid.h"
 
 
 //UART1中断
 void UART1_Isr() interrupt 4
 {
-    uint8 res;
-	static uint8 dwon_count;
+//    uint8 res;
+//	static uint8 dwon_count;
     if(UART1_GET_TX_FLAG)
     {
         UART1_CLEAR_TX_FLAG;
@@ -32,17 +36,17 @@ void UART1_Isr() interrupt 4
     if(UART1_GET_RX_FLAG)
     {
         UART1_CLEAR_RX_FLAG;
-        res = SBUF;
-        //程序自动下载
-        if(res == 0x7F)
-        {
-            if(dwon_count++ > 20)
-                IAP_CONTR = 0x60;
-        }
-        else
-        {
-            dwon_count = 0;
-        }
+//        res = SBUF;
+//        //程序自动下载
+//        if(res == 0x7F)
+//        {
+//            if(dwon_count++ > 20)
+//                IAP_CONTR = 0x60;
+//        }
+//        else
+//        {
+//            dwon_count = 0;
+//        }
     }
 }
 
@@ -97,7 +101,8 @@ void UART4_Isr() interrupt 18
         UART4_CLEAR_RX_FLAG;
 		//接收数据寄存器为：S4BUF;
 
-
+		g_RxDat = S4BUF;
+		g_RxData[g_RxPointer++] = g_RxDat;
 	}
 }
 
@@ -149,7 +154,7 @@ void INT4_Isr() interrupt 16
 //定时器0中断
 void TM0_Isr() interrupt 1
 {
-
+	
 }
 
 
@@ -162,12 +167,70 @@ void TM1_Isr() interrupt 3
 }
 
 
+float left_pid = 0, right_pid = 0;               //速度环pid的增量，还需转化再赋给电机
+float pidtopwm_left = 0, pidtopwm_right = 0;     //速度环pid的转化值
+int g_DutyLeft = 0, g_DutyRight = 0;             //最后真正要给电机的PWM值
+
+float imu693_pid = 0;                            //陀螺仪pid的值
+float Gyro_Z = 0, filtered_GyroZ = 0;            //陀螺仪角速度的原始值和卡尔曼滤波之后的值
+
+int g_LeftPoint = 50;                            //左轮目标速度                  
+int g_RightPoint = 50;                           //右轮目标速度       
+float g_IMU693Point = 0.0;                       //陀螺仪目标角速度       
+
+int count = 0, flag = 0;
+
 
 //定时器2中断
 void TM2_Isr() interrupt 12
 {
 	TIM2_CLEAR_FLAG;  //清除中断标志
 	
+	count++;
+	if (count >= 300)
+	{
+		flag = 1;
+		count = 0;
+	}
+	
+	//读取并清除编码器的值
+	g_EncoderLeft = get_left_encoder();
+	g_EncoderRight = get_right_encoder();
+	
+	/*
+		读取角速度并转化为实际物理数据
+		当突然左转，Gyro_Z为正值；突然右转，Gyro_Z为负值
+	*/
+	imu963ra_get_gyro();
+	Gyro_Z = imu963ra_gyro_transition(imu963ra_gyro_z);
+	
+	//对Gyro_Z进行卡尔曼滤波
+	filtered_GyroZ = Kalman_Update(&imu693_kf, Gyro_Z);
+	
+	//计算陀螺仪角速度pid
+	imu693_pid = pid_poisitional(&IMU693PID, filtered_GyroZ, g_IMU693Point);
+	
+	//更新卡尔曼滤波的值
+	Kalman_Predict(&imu693_kf, imu693_pid);
+	
+	//计算速度环pid
+	left_pid = pid_increment(&LeftPID, g_EncoderLeft, g_LeftPoint);
+	right_pid = pid_increment(&RightPID, g_EncoderRight, g_RightPoint);
+	
+	/*
+		把速度环pid的值转化成PWM的增值
+		因为left_pid和right_pid的值很小，大概在零点几左右，所以我就把他放大了一点
+		所以也不是严格的转化成pwm的数量级
+	*/
+	pidtopwm_left = 40.0 * left_pid;
+	pidtopwm_right = 40.0 * right_pid;
+	
+	//并级pid累加
+	g_DutyLeft += pidtopwm_left - imu693_pid;
+	g_DutyRight += pidtopwm_right + imu693_pid;
+	
+//	set_pwm_left(g_DutyLeft);
+//	set_pwm_right(g_DutyRight);
 }
 
 
@@ -176,7 +239,6 @@ void TM2_Isr() interrupt 12
 void TM3_Isr() interrupt 19
 {
 	TIM3_CLEAR_FLAG; //清除中断标志
-	
 	
 }
 

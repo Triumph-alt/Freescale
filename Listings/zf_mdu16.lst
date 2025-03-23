@@ -1,10 +1,11 @@
-C251 COMPILER V5.60.0,  zf_mdu16                                                           18/02/25  20:47:29  PAGE 1   
+C251 COMPILER V5.60.0,  zf_mdu16                                                           23/03/25  16:11:07  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_mdu16
 OBJECT MODULE PLACED IN .\Objects\zf_mdu16.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_mdu16.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librar
-                    -ies;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_mdu16.lst) OBJECT(.\Objects\zf_mdu16.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_mdu16.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;
+                    -.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_mdu16.lst) OBJECT(.\Objects\zf_mdu16.o
+                    -bj) 
 
 stmt  level    source
 

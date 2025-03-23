@@ -2,20 +2,20 @@
 #define __MAIN_H__
 
 
-//------C标准库头文件
+//C标准库头文件
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 
-//------STC32G SDK等
+//STC32G SDK等
 #include "STC32Gxx.h"
 #include "board.h"
 #include "common.h"
 #include "intrins.h"
 
 
-//------逐飞科技单片机外设驱动头文件
+//逐飞科技单片机外设驱动头文件
 #include "zf_uart.h"
 #include "zf_gpio.h"
 #include "zf_iic.h"
@@ -31,7 +31,7 @@
 //#include "zf_function.h"
 
 
-//------逐飞科技产品驱动头文件
+//逐飞科技产品驱动头文件
 //#include "SEEKFREE_FONT.h"
 //#include "SEEKFREE_18TFT.h"
 //#include "SEEKFREE_ICM20602.h"
@@ -47,7 +47,7 @@
 //#include "SEEKFREE_WIRELESS_CH573.h"
 //#include "SEEKFREE_CONFIG.h"
 //#include "SEEKFREE_IMU660RA.h"
-//#include "SEEKFREE_IMU963RA.h"
+#include "SEEKFREE_IMU963RA.h"
 //#include "SEEKFREE_DL1A.h"
 //#include "SEEKFREE_VIRSCO.h"
 //#include "SEEKFREE_DL1B.h"
@@ -55,8 +55,15 @@
 //#include "SEEKFREE_GPS_TAU1201.h"
 
 
-//------逐飞科技产品组件层文件
+//逐飞科技产品组件层文件
 //#include "seekfree_assistant.h"
+
+
+
+
+extern uint8_t RxData[50];
+extern uint8_t RxPointer;
+extern uint8_t RxDat;
 
 
 

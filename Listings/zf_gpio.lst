@@ -1,10 +1,11 @@
-C251 COMPILER V5.60.0,  zf_gpio                                                            18/02/25  20:47:29  PAGE 1   
+C251 COMPILER V5.60.0,  zf_gpio                                                            23/03/25  16:11:06  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_gpio
 OBJECT MODULE PLACED IN .\Objects\zf_gpio.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_gpio.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librari
-                    -es;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_gpio.lst) OBJECT(.\Objects\zf_gpio.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_gpio.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;.
+                    -\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_gpio.lst) OBJECT(.\Objects\zf_gpio.obj)
+                    - 
 
 stmt  level    source
 
@@ -65,9 +66,9 @@ stmt  level    source
    50          //  @param      mode        Òý½ÅÄ£Ê½ GPIO:×¼Ë«Ïò¿Ú, GPO_PP:ÍÆÍìÊä³ö, GPI_IMPEDANCE:¸ß×èÊäÈë, GPI_OD:¿ªÂ©Ê
              -ä³ö
    51          //  @return     void
-   52          //  Sample usage:           gpio_mode(P0_0,GPIO);       // ÉèÖÃP0.0ÉèÖÃÎªË«ÏòIO
-C251 COMPILER V5.60.0,  zf_gpio                                                            18/02/25  20:47:29  PAGE 2   
+C251 COMPILER V5.60.0,  zf_gpio                                                            23/03/25  16:11:06  PAGE 2   
 
+   52          //  Sample usage:           gpio_mode(P0_0,GPIO);       // ÉèÖÃP0.0ÉèÖÃÎªË«ÏòIO
    53          //-------------------------------------------------------------------------------------------------------
              -------------
    54          void gpio_mode(PIN_enum pin, GPIOMODE_enum mode)
@@ -133,9 +134,9 @@ stmt  level    source
   114   3                              P2M1 &= ~(1<<(pin&0xF));
   115   3                              P2M0 |=  (1<<(pin&0xF));
   116   3                      }
-  117   2                      
-C251 COMPILER V5.60.0,  zf_gpio                                                            18/02/25  20:47:29  PAGE 3   
+C251 COMPILER V5.60.0,  zf_gpio                                                            23/03/25  16:11:06  PAGE 3   
 
+  117   2                      
   118   2                      if(0x30 == (pin&0xF0))  //P3
   119   2                      {
   120   3                              P3M1 &= ~(1<<(pin&0xF));
@@ -201,9 +202,9 @@ stmt  level    source
   180   3                              P6M1 |=  (1<<(pin&0xF));
   181   3                              P6M0 &= ~(1<<(pin&0xF));
   182   3                      }
-  183   2                      if(0x70 == (pin&0xF0))  //P5
-C251 COMPILER V5.60.0,  zf_gpio                                                            18/02/25  20:47:29  PAGE 4   
+C251 COMPILER V5.60.0,  zf_gpio                                                            23/03/25  16:11:06  PAGE 4   
 
+  183   2                      if(0x70 == (pin&0xF0))  //P5
   184   2                      {
   185   3                              P7M1 |=  (1<<(pin&0xF));
   186   3                              P7M0 &= ~(1<<(pin&0xF));
@@ -270,9 +271,9 @@ Module Information          Static   Overlayable
   bit size             =    ------     ------
   ebit size            =    ------     ------
   bitaddressable size  =    ------     ------
-  ebitaddressable size =    ------     ------
-C251 COMPILER V5.60.0,  zf_gpio                                                            18/02/25  20:47:29  PAGE 5   
+C251 COMPILER V5.60.0,  zf_gpio                                                            23/03/25  16:11:06  PAGE 5   
 
+  ebitaddressable size =    ------     ------
   far data size        =    ------     ------
   huge data size       =    ------     ------
   const size           =    ------     ------

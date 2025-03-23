@@ -1,10 +1,11 @@
-C251 COMPILER V5.60.0,  zf_delay                                                           18/02/25  20:47:27  PAGE 1   
+C251 COMPILER V5.60.0,  zf_delay                                                           23/03/25  16:11:04  PAGE 1   
 
 
 C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_delay
 OBJECT MODULE PLACED IN .\Objects\zf_delay.obj
-COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_delay.c XSMALL INTR2 BROWSE INCDIR(.\user;.\librar
-                    -ies;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_delay.lst) OBJECT(.\Objects\zf_delay.obj) 
+COMPILER INVOKED BY: D:\keil5\C251\BIN\C251.EXE seekfree_libraries\zf_delay.c XSMALL INTR2 FLOAT64 BROWSE INCDIR(.\user;
+                    -.\libraries;.\seekfree_libraries;.\seekfree_peripheral) DEBUG PRINT(.\Listings\zf_delay.lst) OBJECT(.\Objects\zf_delay.o
+                    -bj) 
 
 stmt  level    source
 
@@ -65,9 +66,9 @@ stmt  level    source
    49          {
    50   1              uint16 i;
    51   1              do {
-   52   2                              i = zf_delay_ms;
-C251 COMPILER V5.60.0,  zf_delay                                                           18/02/25  20:47:27  PAGE 2   
+C251 COMPILER V5.60.0,  zf_delay                                                           23/03/25  16:11:04  PAGE 2   
 
+   52   2                              i = zf_delay_ms;
    53   2                              //i = sys_clk/6000;//参数: ms,要延时的ms数, 这里只支持1~255ms. 自动适应主时钟.
    54   2                              while(--i);
    55   2                 }while(--ms);

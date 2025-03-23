@@ -1,6 +1,7 @@
 ".\Objects\board.obj",
 ".\Objects\common.obj",
 ".\libraries\STC32_MDU32_V1.1.LIB",
+".\Objects\SEEKFREE_IMU963RA.obj",
 ".\Objects\zf_adc.obj",
 ".\Objects\zf_delay.obj",
 ".\Objects\zf_eeprom.obj",
@@ -16,7 +17,11 @@
 ".\Objects\zf_tim.obj",
 ".\Objects\zf_uart.obj",
 ".\Objects\main.obj",
-".\Objects\isr.obj" 
+".\Objects\isr.obj",
+".\Objects\motor.obj",
+".\Objects\encoder.obj",
+".\Objects\pid.obj",
+".\Objects\filter.obj" 
 TO ".\Objects\empty_model" 
 PRINT(".\Listings\empty_model.map") CASE 
 REMOVEUNUSED 
